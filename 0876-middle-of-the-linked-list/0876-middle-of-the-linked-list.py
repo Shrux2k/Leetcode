@@ -18,15 +18,9 @@ class Solution:
         
         
         num = int(count/2)
-        if count % 2 == 0:
-            
-            for i in range(0, num):
-                node = node.next
-            return node
-        else:
-            for i in range(0, num):
-                node = node.next
-            return node
+        for i in range(0, num):
+            node = node.next
+        return node
         
             
             

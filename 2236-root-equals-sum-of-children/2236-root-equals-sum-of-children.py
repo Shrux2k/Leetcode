@@ -7,19 +7,11 @@
 class Solution:
     def checkTree(self, root: Optional[TreeNode]) -> bool:
         
-        res = []
+        temp_root = root
         
-        def inOrder(root):
-            
-            if not root:
-                return
-            
-            inOrder(root.left)
-            res.append(root.val)
-            inOrder(root.right)
-        inOrder(root)
+        sum = root.left.val + root.right.val
         
-        if res[0] + res[2] == res[1]:
+        if temp_root.val == sum:
             return True
         else:
             return False
